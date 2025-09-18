@@ -43,8 +43,8 @@ export async function deleteProfile(req, res) {
       return res.status(404).json({ message: "Usuario no encontrado" });
     }
   await removeUser(user);
-    return res.status(200).json({ message: "Perfil eliminado exitosamente" });
+    return res.status(200).json({ message: "Perfil eliminado, trágicamente" });
   } catch (error) {
-    return res.status(500).json({ message: "Error inesperado al eliminar perfil", error: error.message });
+    return res.status(500).json({ message: "Error al eliminar perfil", error: error.message });
   }
 }
